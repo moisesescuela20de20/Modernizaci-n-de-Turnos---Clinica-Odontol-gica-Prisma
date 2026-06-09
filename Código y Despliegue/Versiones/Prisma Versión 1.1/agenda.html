@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Prisma</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+    <header class="header">
+        <nav class="barra_superior">
+             <img class="logo" src="img/prisma.png" width="250" onclick="window.location.href='index.html'">
+
+            <div class="botones">
+    <a href="tratamientos.html" class="button-48">
+        <span class="text">Tratamientos</span>
+    </a>
+    <a href="agenda.html" class="button-48">
+        <span class="text">Agendar Turnos</span>
+    </a>
+    <a href="nosotros.html" class="button-48">
+        <span class="text">Nosotros</span>
+    </a>
+    <a href="contacto.html" class="button-48">
+    <span class="text">Contacto</span>
+</a>
+</div>
+        </nav>
+    </header>
+<body>
+<div class="turnos-container">
+
+    <button class="flecha" id="anterior">
+        &#10094;
+    </button>
+    <div class="contenido-turnos">
+        <h1 id="rango-semana"></h1>
+        <div class="dias" id="dias-container"></div>
+    </div>
+    <button class="flecha" id="siguiente">
+        &#10095;
+    </button>
+</div>
+<div id="sidebar-turnos" class="sidebar">
+    
+    <h2>Reservar turno</h2>
+
+    <p id="fecha-seleccionada"></p>
+
+<label>Horario</label>
+
+<div id="horarios-container" class="horarios-container">
+    <button class="horario-btn" data-hora="10:30">10:30</button>
+    <button class="horario-btn" data-hora="12:00">12:00</button>
+    <button class="horario-btn" data-hora="13:30">13:30</button>
+    <button class="horario-btn" data-hora="15:00">15:00</button>
+    <button class="horario-btn" data-hora="16:30">16:30</button>
+    <button class="horario-btn" data-hora="18:00">18:00</button>
+</div>
+
+    <label>Nombre</label>
+    <input id="nombre" type="text" placeholder="Ingresá tu nombre">
+
+    <label>Apellido</label>
+    <input id="apellido" type="text" placeholder="Ingresá tu apellido">
+
+    <label>Celular</label>
+    <input id="celular" type="text" placeholder="Ej: 11 1234 5678">
+
+    <label>Correo</label>
+    <input id="correo" type="email" placeholder="ejemplo@mail.com">
+
+    <button id="confirmar-turno">Confirmar turno</button>
+
+    <button id="cerrar-sidebar">Cerrar</button>
+
+</div>
+</body>
+<script src="js/turnos.js"></script>
+</html>
+
+

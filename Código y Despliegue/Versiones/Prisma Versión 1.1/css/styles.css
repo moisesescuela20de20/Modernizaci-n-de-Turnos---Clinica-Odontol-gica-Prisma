@@ -1,0 +1,412 @@
+header{
+    background-color: white;
+    padding: 20px 20px;
+    color: black;
+}
+.logo{
+    cursor: pointer;
+}
+
+.barra_superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#l{/*Lema*/
+    max-width: 1100px;
+    width: 90%;
+    margin-left:auto;
+    margin-right: auto; 
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.botones{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 35px;
+}
+
+body {
+    margin: 0;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(145, 145, 145, 0.5)), url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+.texto{
+    flex: 1;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;
+}
+.texto h2{
+    font-size: 30px;
+}
+
+.texto h1{
+    font-size: 45px;
+}
+
+.button-48 {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-width: 0;
+    box-sizing: border-box;
+    color: #0a5bd3;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Clarkson, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1em;
+    margin: 0;
+    outline: 0;
+    padding: 1em 1.8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),
+                background-color 100ms cubic-bezier(.694, 0, 0.335, 1),
+                color 100ms cubic-bezier(.694, 0, 0.335, 1);
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.button-48:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #EBEBEB;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+}
+
+.button-48:hover:before {
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48 span {
+    position: relative;
+    z-index: 1;
+}
+
+.contacto{
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card{/*Cuadros de información*/
+    width: 240px;
+    height: 160px;
+
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 15px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 0; 
+}
+
+.card h3{
+    margin: 0;
+}
+
+.card p{
+    margin: 4px 0;
+}
+.whatsapp-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.whatsapp{
+    width: 160px;
+    padding: 12px 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #25D366;
+    color: white;
+
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.whatsapp:hover{
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+}
+
+/*carrusel*/
+.turnos-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.contenido-turnos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rango-semana{
+    color: white;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.dias{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dia-card{
+    width: 110px;
+    height: 120px;
+
+    background: rgba(255,255,255,0.90);
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.dia-card{
+    transition: all 0.25s ease;
+}
+
+.dia-card:not(.no-disponible):hover{
+    transform: scale(1.05);
+}
+
+.dia-card h3{
+    margin: 0;
+    font-size: 18px;
+}
+
+.dia-card h2{
+    margin: 10px 0 0 0;
+    font-size: 42px;
+}
+
+/* Día seleccionado */
+.activo{
+    background-color: #0a5bd3;
+    color: rgb(0, 0, 0);
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(10, 91, 211, 0.4);
+}
+
+/* Sábados y domingos */
+.no-disponible{
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(100%);
+}
+
+.dia-card.libre{
+    background: rgba(255,255,255,0.90);
+}
+
+.dia-card.medio{
+    background: #fff3a0;
+}
+
+.dia-card.critico{
+    background: #ff8a8a;
+}
+
+.dia-card.lleno{
+    opacity: 0.35;
+    pointer-events: none;
+    filter: grayscale(100%);
+}
+
+.no-disponible::after{
+    content: "No disponible";
+    font-size: 10px;
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Flechas */
+.flecha{
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 50px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.flecha:hover{
+    transform: scale(1.2);
+}
+/*sidebar*/
+.sidebar{
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 9999; /* 🔥 esto arregla todo */
+}
+
+.sidebar.activo{
+    right: 0;
+}
+
+.sidebar input,
+.sidebar select{
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#confirmar-turno{
+    margin-top: 15px;
+    padding: 12px;
+    background: #0a5bd3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#confirmar-turno:hover{
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(10, 91, 211, 0.3);
+}
+
+#cerrar-sidebar{
+    margin-top: 10px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#cerrar-sidebar:hover{
+    background: #f2f2f2;
+}
+
+.horarios-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.horario-btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: white;
+    transition: 0.2s;
+}
+
+.horario-btn.libre{
+    background: rgb(68, 95, 253);
+}
+
+.horario-btn.medio{
+    background: #fff3a0;
+}
+
+.horario-btn.critico{
+    background: #ff8a8a;
+}
+
+.horario-btn.lleno{
+    opacity: 0.4;
+    pointer-events: none;
+    background: #d9d9d9;
+}
+
+.horario-btn:hover{
+    transform: scale(1.05);
+}
+
+.horario-btn.activo{
+    background: #0a5bd3 !important;
+    color: white !important;
+    border-color: #0a5bd3 !important;
+
+    transform: scale(1.12) !important;
+    box-shadow: 0 10px 20px rgba(10, 91, 211, 0.45);
+
+    z-index: 5;
+    position: relative;
+}
+
+.dia-card,
+.horario-btn{
+    user-select: none;
+}
+
+.horario-btn.libre,
+.horario-btn.medio,
+.horario-btn.critico{
+    transition: all 0.2s ease;
+}
+
